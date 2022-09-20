@@ -10,4 +10,7 @@
   <project name="meta-arm" remote="yocto"/>
   <project name="meta-rockchip" remote="yocto"/>
 
+  <project name="kraj/meta-clang" path="meta-clang" remote="github"/>
+  <project name="meta-flutter/meta-flutter.git" path="meta-flutter" remote="github"/>
+
 </manifest>

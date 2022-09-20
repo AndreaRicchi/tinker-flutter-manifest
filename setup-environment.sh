@@ -15,11 +15,17 @@ bitbake-layers add-layer \
 	../meta-openembedded/meta-oe \
 	../meta-arm/meta-arm-toolchain \
 	../meta-arm/meta-arm \
-	../meta-rockchip
+	../meta-rockchip \
+	../meta-clang \
+	../meta-flutter
 
 sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ??= \"tinker-board-s\"|g" ./conf/local.conf
 
 echo '' >>./conf/local.conf
 echo 'MACHINE_EXTRA_RRECOMMENDS += "kernel-modules"' >>./conf/local.conf
 echo 'BB_NUMBER_THREADS ?= "4"' >>./conf/local.conf
-echo 'IMAGE_INSTALL:append = " strace"' >>./conf/local.conf
+echo 'IMAGE_INSTALL:append = " \
+              strace \
+              flutter-gallery-runtimerelease \
+              "' >> ./conf/local.conf
+echo 'TOOLCHAIN_HOST_TASK:append = " nativesdk-flutter-sdk"' >>./conf/local.conf
