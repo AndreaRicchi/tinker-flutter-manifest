@@ -1,4 +1,4 @@
-# /bin/sh
+#!/bin/sh
 
 DIR="build"
 if [ -d "$DIR" ]; then
@@ -25,7 +25,7 @@ echo '' >>./conf/local.conf
 echo 'MACHINE_EXTRA_RRECOMMENDS += "kernel-modules"' >>./conf/local.conf
 echo 'BB_NUMBER_THREADS ?= "4"' >>./conf/local.conf
 echo 'IMAGE_INSTALL:append = " \
-              strace \
-              flutter-gallery-runtimerelease \
-              "' >> ./conf/local.conf
+		strace \
+		flutter-gallery-runtimerelease \
+		"' >>./conf/local.conf
 echo 'TOOLCHAIN_HOST_TASK:append = " nativesdk-flutter-sdk"' >>./conf/local.conf
