@@ -24,8 +24,3 @@ sed -i "s|MACHINE ??= \"qemux86-64\"|MACHINE ??= \"tinker-board-s\"|g" ./conf/lo
 echo '' >>./conf/local.conf
 echo 'MACHINE_EXTRA_RRECOMMENDS += "kernel-modules"' >>./conf/local.conf
 echo 'BB_NUMBER_THREADS ?= "4"' >>./conf/local.conf
-echo 'IMAGE_INSTALL:append = " \
-		strace \
-		flutter-gallery-runtimerelease \
-		"' >>./conf/local.conf
-echo 'TOOLCHAIN_HOST_TASK:append = " nativesdk-flutter-sdk"' >>./conf/local.conf
