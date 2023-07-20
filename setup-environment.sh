@@ -30,9 +30,9 @@ echo 'DISTRO_FEATURES:append = " wayland pam"' >>./conf/local.conf
 
 echo '
 IMAGE_INSTALL:append = " \
-    flutter-engine-runtimedebug \
-    flutter-pi-runtimedebug \
-    flutter-gallery-runtimedebug \
+    flutter-engine \
+    flutter-pi \
+    flutter-gallery \
 "
 ' >>./conf/local.conf
 
